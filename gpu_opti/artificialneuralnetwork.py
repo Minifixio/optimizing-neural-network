@@ -264,3 +264,32 @@ for max_iter in max_iters:
 
 for i, t in enumerate(iter_times):
   print(f"{max_iters[i]} {t}")
+
+  import numpy as np
+MAX_ITER = 300
+PLOT = False
+
+def stdTime(n_runs=10):
+    """Compute the standard deviation of execution times over multiple runs."""
+    times = []
+    global N_iter, J_min, theta_best, Js_train, Js_test
+    for _ in range(n_runs):
+        N_iter = 1
+        J_min = float('inf')
+        theta_best = []
+        Js_train = torch.tensor([], device=device)
+        Js_test = torch.tensor([], device=device)
+        start_time = timer()
+        main(MAX_ITER)
+        end_time = timer()
+        times.append(end_time - start_time)
+
+    mean_time = np.mean(times)
+    std_dev = np.std(times)
+
+    print(f"\nMean execution time: {mean_time:.6f} seconds")
+    print(f"Standard deviation: {std_dev:.6f} seconds")
+
+    return mean_time, std_dev
+
+mean_time, std_dev = stdTime(5)
