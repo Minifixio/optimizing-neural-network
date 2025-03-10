@@ -6,7 +6,7 @@ This project focuses on the **performance analysis and optimization** of a Pytho
 
 My work explores various **performance optimization techniques** for artificial neural networks, applying strategies such as **profiling, memory layout optimization, Cython acceleration, GPU computation, and parallelization**. The goal is to **reduce execution time** and **improve computational efficiency** by leveraging modern hardware capabilities.  
 
-This project is originally designed as part of the *DD2358 - Introduction to High Performance Computing* course at KTH for my master give by **Stefano Markidis**.
+This project is originally designed as part of the [_**DD2358 - Introduction to High Performance Computing**_](https://www.kth.se/student/kurser/kurs/DD2358?l=en) course at KTH for my master given by Pr. **Stefano Markidis**.
 
 ## Repository Structure
 
