@@ -1,0 +1,5 @@
+Default 55.159428 1.844616
+Data Layout Optimization 19.784737 1.338826
+Cython Optimization 12.702693 1.409490
+JAX Optimization 11.289530 0.966425
+GPU Optimization 2.238258 0.206538
